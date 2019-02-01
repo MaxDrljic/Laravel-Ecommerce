@@ -29,4 +29,11 @@ class ShoppingController extends Controller
     {
         return view('cart');
     }
+
+    public function cart_delete($id)
+    {
+        Cart::remove($id);
+
+        return redirect()->back();
+    }
 }
