@@ -36,6 +36,16 @@ Route::get('cart/delete{id}', [
     'as'    => 'cart.delete'
 ]);
 
+Route::get('cart/incr/{id}/{qty}', [
+    'uses'  => 'ShoppingController@incr',
+    'as'    => 'cart.incr'
+]);
+
+Route::get('cart/decr/{id}/{qty}', [
+    'uses'  => 'ShoppingController@decr',
+    'as'    => 'cart.decr'
+]);
+
 Route::resource('products', 'ProductsController');
 
 Auth::routes();
