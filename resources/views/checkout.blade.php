@@ -65,7 +65,7 @@
                     </td>
 
                     <td class="product-subtotal">
-                      <h5 class="total amount">${{ Cart::total() }}</h5>
+                      <h5 class="total amount">${{ number_format(Cart::total()) }}</h5>
                     </td>
                   </tr>
 
@@ -94,7 +94,7 @@
                           <script
                             src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                             data-key="{{ env('STRIPE_KEY') }}"
-                            data-amount="999"
+                            data-amount="{{ Cart::total() * 100 }}"
                             data-name="Laravel Store"
                             data-description="Buy some books"
                             data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
