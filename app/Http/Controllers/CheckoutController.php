@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Mail;
 use Cart;
 use Stripe\Charge;
 use Stripe\Stripe;
@@ -11,6 +12,11 @@ class CheckoutController extends Controller
 {
     public function index()
     {
+        if(Cart::content()->count() == 0)
+        {
+            toastr()->info('Your cart is still empty. Add a product to cart.');
+            return redirect()->back();
+        }
         return view('checkout');
     }
 
@@ -25,6 +31,12 @@ class CheckoutController extends Controller
             'source'        => request()->stripeToken
         ]);
 
-        dd('Your cart was charged successfully!');
+        toastr()->success('Purchase successful! Check your email for verification.');
+
+        Cart::destroy();
+
+        Mail::to(request()->stripeEmail)->send(new \App\Mail\PurchaseSuccessful);
+
+        return redirect('/');
     }
 }

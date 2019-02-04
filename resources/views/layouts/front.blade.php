@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Seosight - Shop</title>
 
+    <!-- Scripts -->
+
+    <script src="{{ asset('app/js/jquery-2.1.4.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="{{ asset('app/js/crum-mega-menu.js') }}"></script>
+    <script src="{{ asset('app/js/swiper.jquery.min.js') }}"></script>
+    <script src="{{ asset('app/js/theme-plugins.js') }}"></script>
+    <script src="{{ asset('app/js/main.js') }}"></script>
+    <script src="{{ asset('app/js/form-actions.js') }}"></script>
+
+    <script src="{{ asset('app/js/velocity.min.js') }}"></script>
+    <script src="{{ asset('app/js/ScrollMagic.min.js') }}"></script>
+    <script src="{{ asset('app/js/animation.velocity.min.js') }}"></script>
+
+    <!-- Fonts -->
+
     <link rel="stylesheet" type="text/css" href="{{ asset('app/css/fonts.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app/css/crumina-fonts.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app/css/normalize.css') }}">
@@ -18,6 +34,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('app/css/swiper.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app/css/primary-menu.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+<!-- ...end JS Script -->
 
     <!--Styles for RTL-->
 
@@ -31,6 +50,7 @@
 
 
 <body class=" ">
+@toastr_render
 
 <header class="header" id="site-header">
 
@@ -98,21 +118,6 @@
         </div>
     </div>
 </footer>
-
-
-
-<script src="{{ asset('app/js/jquery-2.1.4.min.js') }}"></script>
-<script src="{{ asset('app/js/crum-mega-menu.js') }}"></script>
-<script src="{{ asset('app/js/swiper.jquery.min.js') }}"></script>
-<script src="{{ asset('app/js/theme-plugins.js') }}"></script>
-<script src="{{ asset('app/js/main.js') }}"></script>
-<script src="{{ asset('app/js/form-actions.js') }}"></script>
-
-<script src="{{ asset('app/js/velocity.min.js') }}"></script>
-<script src="{{ asset('app/js/ScrollMagic.min.js') }}"></script>
-<script src="{{ asset('app/js/animation.velocity.min.js') }}"></script>
-
-<!-- ...end JS Script -->
 
 
 </body>
