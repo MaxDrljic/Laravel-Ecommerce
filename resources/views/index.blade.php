@@ -12,11 +12,11 @@
                             <div class="{{ asset('app/books-item-thumb') }}">
                                 <img src="{{ asset($product->image) }}" alt="book">
                                 {{--  <div class="new">New</div>  --}}
-                                <div class="sale">Sale</div>
                                 {{--  <div class="overlay overlay-books"></div>  --}}
                             </div>
     
                             <div class="books-item-info">
+                                <br>
                                 <a href="{{ route('product.single', ['id' => $product->id]) }}">
                                     <h5 class="books-title">{{ $product->name }}</h5>
                                 </a>
